@@ -1,30 +1,25 @@
 #!/usr/bin/env python3
+
+# References:
+# https://stackoverflow.com/questions/49887540/improve-python-code
+# Nerd guides on RPi gadget mode as a keyboard
+
+
+import string, ascii
+from codes import codes
+
 NULL_CHAR = chr(0)
 
+# write bytes to enabled gadget mode interface 
 def write_report(report):
     with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report.encode())
 
-def send_ch(ch):
-    lower = ch.islower()
-    diff = ord(ch.lower())-ord('a')
-    if lower:
-        write_report(NULL_CHAR*2+chr(4+diff)+NULL_CHAR*5)
-    else:
-        write_report(chr(32)+NULL_CHAR+chr(4+diff)+NULL_CHAR*5)
-    write_report(NULL_CHAR*8)
-
+# Send key press and release for each character to simulate typing
 def send_string(s):
     for ch in s:
-        send_ch(ch)
+        write_report(codes[ch])
+        write_report(NULL_CHAR*8) #Release key
+    
+send_string("username\tpassword\r")
 
-send_string("hello")
-
-# Press SPACE key
-write_report(NULL_CHAR*2+chr(44)+NULL_CHAR*5)
-
-# Press RETURN/ENTER key
-write_report(NULL_CHAR*2+chr(40)+NULL_CHAR*5)
-
-# Release all keys
-write_report(NULL_CHAR*8)
