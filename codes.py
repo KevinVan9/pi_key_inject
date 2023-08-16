@@ -1,32 +1,37 @@
 #Dictionary
 NULL_CHAR = chr(0)
+
+# First byte is modifier
+# Second byte is reserved null
+# Next 6 bytes are keys
+# eg 0x02 aka chr(2) is the SHIFT modifier
 codes = {
-'a':NULL_CHAR*2 +chr(4)+NULL_CHAR*5,
-'b':NULL_CHAR*2 +chr(5)+NULL_CHAR*5,
-'c':NULL_CHAR*2 +chr(6)+NULL_CHAR*5,
-'d':NULL_CHAR*2 +chr(7)+NULL_CHAR*5,
-'e':NULL_CHAR*2 +chr(8)+NULL_CHAR*5,
-'f':NULL_CHAR*2 +chr(9)+NULL_CHAR*5,
-'g':NULL_CHAR*2 +chr(10)+NULL_CHAR*5,
-'h':NULL_CHAR*2 +chr(11)+NULL_CHAR*5,
-'i':NULL_CHAR*2 +chr(12)+NULL_CHAR*5,
-'j':NULL_CHAR*2 +chr(13)+NULL_CHAR*5,
-'k':NULL_CHAR*2 +chr(14)+NULL_CHAR*5,
-'l':NULL_CHAR*2 +chr(15)+NULL_CHAR*5,
-'m':NULL_CHAR*2 +chr(16)+NULL_CHAR*5,
-'n':NULL_CHAR*2 +chr(17)+NULL_CHAR*5,
-'o':NULL_CHAR*2 +chr(18)+NULL_CHAR*5,
-'p':NULL_CHAR*2 +chr(19)+NULL_CHAR*5,
-'q':NULL_CHAR*2 +chr(20)+NULL_CHAR*5,
-'r':NULL_CHAR*2 +chr(21)+NULL_CHAR*5,
-'s':NULL_CHAR*2 +chr(22)+NULL_CHAR*5,
-'t':NULL_CHAR*2 +chr(23)+NULL_CHAR*5,
-'u':NULL_CHAR*2 +chr(24)+NULL_CHAR*5,
-'v':NULL_CHAR*2 +chr(25)+NULL_CHAR*5,
-'w':NULL_CHAR*2 +chr(26)+NULL_CHAR*5,
-'x':NULL_CHAR*2 +chr(27)+NULL_CHAR*5,
-'y':NULL_CHAR*2 +chr(28)+NULL_CHAR*5,
-'z':NULL_CHAR*2 +chr(29)+NULL_CHAR*5,
+'a':NULL_CHAR*2+chr(4)+NULL_CHAR*5,
+'b':NULL_CHAR*2+chr(5)+NULL_CHAR*5,
+'c':NULL_CHAR*2+chr(6)+NULL_CHAR*5,
+'d':NULL_CHAR*2+chr(7)+NULL_CHAR*5,
+'e':NULL_CHAR*2+chr(8)+NULL_CHAR*5,
+'f':NULL_CHAR*2+chr(9)+NULL_CHAR*5,
+'g':NULL_CHAR*2+chr(10)+NULL_CHAR*5,
+'h':NULL_CHAR*2+chr(11)+NULL_CHAR*5,
+'i':NULL_CHAR*2+chr(12)+NULL_CHAR*5,
+'j':NULL_CHAR*2+chr(13)+NULL_CHAR*5,
+'k':NULL_CHAR*2+chr(14)+NULL_CHAR*5,
+'l':NULL_CHAR*2+chr(15)+NULL_CHAR*5,
+'m':NULL_CHAR*2+chr(16)+NULL_CHAR*5,
+'n':NULL_CHAR*2+chr(17)+NULL_CHAR*5,
+'o':NULL_CHAR*2+chr(18)+NULL_CHAR*5,
+'p':NULL_CHAR*2+chr(19)+NULL_CHAR*5,
+'q':NULL_CHAR*2+chr(20)+NULL_CHAR*5,
+'r':NULL_CHAR*2+chr(21)+NULL_CHAR*5,
+'s':NULL_CHAR*2+chr(22)+NULL_CHAR*5,
+'t':NULL_CHAR*2+chr(23)+NULL_CHAR*5,
+'u':NULL_CHAR*2+chr(24)+NULL_CHAR*5,
+'v':NULL_CHAR*2+chr(25)+NULL_CHAR*5,
+'w':NULL_CHAR*2+chr(26)+NULL_CHAR*5,
+'x':NULL_CHAR*2+chr(27)+NULL_CHAR*5,
+'y':NULL_CHAR*2+chr(28)+NULL_CHAR*5,
+'z':NULL_CHAR*2+chr(29)+NULL_CHAR*5,
 'A':chr(2)+NULL_CHAR+chr(4)+NULL_CHAR*5,
 'B':chr(2)+NULL_CHAR+chr(5)+NULL_CHAR*5,
 'C':chr(2)+NULL_CHAR+chr(6)+NULL_CHAR*5,
@@ -53,63 +58,61 @@ codes = {
 'X':chr(2)+NULL_CHAR+chr(27)+NULL_CHAR*5,
 'Y':chr(2)+NULL_CHAR+chr(28)+NULL_CHAR*5,
 'Z':chr(2)+NULL_CHAR+chr(29)+NULL_CHAR*5,
-'1':NULL_CHAR*2 +chr(30)+NULL_CHAR*5,
-'2':NULL_CHAR*2 +chr(31)+NULL_CHAR*5,
-'3':NULL_CHAR*2 +chr(32)+NULL_CHAR*5,
-'4':NULL_CHAR*2 +chr(33)+NULL_CHAR*5,
-'5':NULL_CHAR*2 +chr(34)+NULL_CHAR*5,
-'6':NULL_CHAR*2 +chr(35)+NULL_CHAR*5,
-'7':NULL_CHAR*2 +chr(36)+NULL_CHAR*5,
-'8':NULL_CHAR*2 +chr(37)+NULL_CHAR*5,
-'9':NULL_CHAR*2 +chr(38)+NULL_CHAR*5,
-'0':NULL_CHAR*2 +chr(39)+NULL_CHAR*5,
+'1':NULL_CHAR*2+chr(30)+NULL_CHAR*5,
+'2':NULL_CHAR*2+chr(31)+NULL_CHAR*5,
+'3':NULL_CHAR*2+chr(32)+NULL_CHAR*5,
+'4':NULL_CHAR*2+chr(33)+NULL_CHAR*5,
+'5':NULL_CHAR*2+chr(34)+NULL_CHAR*5,
+'6':NULL_CHAR*2+chr(35)+NULL_CHAR*5,
+'7':NULL_CHAR*2+chr(36)+NULL_CHAR*5,
+'8':NULL_CHAR*2+chr(37)+NULL_CHAR*5,
+'9':NULL_CHAR*2+chr(38)+NULL_CHAR*5,
+'0':NULL_CHAR*2+chr(39)+NULL_CHAR*5,
 '!':chr(2)+NULL_CHAR+chr(30)+NULL_CHAR*5,
 '@':chr(2)+NULL_CHAR+chr(31)+NULL_CHAR*5,
 '#':chr(2)+NULL_CHAR+chr(32)+NULL_CHAR*5,
+'$':chr(2)+NULL_CHAR+chr(33)+NULL_CHAR*5,
+'%':chr(2)+NULL_CHAR+chr(34)+NULL_CHAR*5,
+'^':chr(2)+NULL_CHAR+chr(35)+NULL_CHAR*5,
 '&':chr(2)+NULL_CHAR+chr(36)+NULL_CHAR*5,
 '*':chr(2)+NULL_CHAR+chr(37)+NULL_CHAR*5,
 '(':chr(2)+NULL_CHAR+chr(38)+NULL_CHAR*5,
 ')':chr(2)+NULL_CHAR+chr(39)+NULL_CHAR*5,
-'-':NULL_CHAR*2 +chr(45)+NULL_CHAR*5,
-'=':NULL_CHAR*2 +chr(46)+NULL_CHAR*5,
-'{':NULL_CHAR*2 +chr(47)+NULL_CHAR*5,
-'}':NULL_CHAR*2 +chr(48)+NULL_CHAR*5,
-'\\':NULL_CHAR*2 +chr(49)+NULL_CHAR*5,
-';':NULL_CHAR*2 +chr(51)+NULL_CHAR*5,
-'':NULL_CHAR*2 +chr(52)+NULL_CHAR*5,
-'`':NULL_CHAR*2 +chr(53)+NULL_CHAR*5,
-',':NULL_CHAR*2 +chr(54)+NULL_CHAR*5,
-'.':NULL_CHAR*2 +chr(55)+NULL_CHAR*5,
-'/':NULL_CHAR*2 +chr(56)+NULL_CHAR*5,
-'0':chr(2)+NULL_CHAR+chr(50)+NULL_CHAR*5,
+'-':NULL_CHAR*2+chr(45)+NULL_CHAR*5,
+'=':NULL_CHAR*2+chr(46)+NULL_CHAR*5,
+'{':chr(2)+NULL_CHAR+chr(47)+NULL_CHAR*5,
+'[':NULL_CHAR*2+chr(47)+NULL_CHAR*5,
+']':NULL_CHAR*2+chr(48)+NULL_CHAR*5,
+'}':chr(2)+NULL_CHAR+chr(48)+NULL_CHAR*5,
+'\\':NULL_CHAR*2+chr(49)+NULL_CHAR*5,
+';':NULL_CHAR*2+chr(51)+NULL_CHAR*5,
+'\'':NULL_CHAR*2+chr(52)+NULL_CHAR*5,
+'`':NULL_CHAR*2+chr(53)+NULL_CHAR*5,
+',':NULL_CHAR*2+chr(54)+NULL_CHAR*5,
+'.':NULL_CHAR*2+chr(55)+NULL_CHAR*5,
+'/':NULL_CHAR*2+chr(56)+NULL_CHAR*5,
+'|':chr(2)+NULL_CHAR+chr(50)+NULL_CHAR*5,
 ':':chr(2)+NULL_CHAR+chr(51)+NULL_CHAR*5,
 '"':chr(2)+NULL_CHAR+chr(52)+NULL_CHAR*5,
 '<':chr(2)+NULL_CHAR+chr(54)+NULL_CHAR*5,
 '>':chr(2)+NULL_CHAR+chr(55)+NULL_CHAR*5,
 '?':chr(2)+NULL_CHAR+chr(56)+NULL_CHAR*5,
-'}':NULL_CHAR*2 +chr(79)+NULL_CHAR*5,
-'{':NULL_CHAR*2 +chr(80)+NULL_CHAR*5,
-']':chr(2)+NULL_CHAR+chr(79)+NULL_CHAR*5,
-'[':chr(2)+NULL_CHAR+chr(80)+NULL_CHAR*5,
+'_':chr(2)+NULL_CHAR+chr(45)+NULL_CHAR*5,
+'+':chr(2)+NULL_CHAR+chr(46)+NULL_CHAR*5,
+'right':NULL_CHAR*2+chr(79)+NULL_CHAR*5,
+'left':NULL_CHAR*2+chr(80)+NULL_CHAR*5,
+'down':NULL_CHAR*2+chr(81)+NULL_CHAR*5,
+'up':NULL_CHAR*2+chr(82)+NULL_CHAR*5,
 
-'\r':NULL_CHAR*2 +chr(40)+NULL_CHAR*5, #ENTER
-'esc':NULL_CHAR*2 +chr(41)+NULL_CHAR*5, #ESC
-'back':NULL_CHAR*2 +chr(42)+NULL_CHAR*5, #BACKSPACE
-'\t':NULL_CHAR*2 +chr(43)+NULL_CHAR*5, #TAB
-' ':NULL_CHAR*2 +chr(44)+NULL_CHAR*5, #SPATIE
-'print':NULL_CHAR*2 +chr(70)+NULL_CHAR*5, #PRINT SCREEN
-'del':NULL_CHAR*2 +chr(76)+NULL_CHAR*5, #DELETE
+'\r':NULL_CHAR*2+chr(40)+NULL_CHAR*5, #ENTER
+'esc':NULL_CHAR*2+chr(41)+NULL_CHAR*5, #ESC
+'back':NULL_CHAR*2+chr(42)+NULL_CHAR*5, #BACKSPACE
+'\t':NULL_CHAR*2+chr(43)+NULL_CHAR*5, #TAB
+' ':NULL_CHAR*2+chr(44)+NULL_CHAR*5, #SPACE
+'print':NULL_CHAR*2+chr(70)+NULL_CHAR*5, #PRINT SCREEN
+'del':NULL_CHAR*2+chr(76)+NULL_CHAR*5, #DELETE
 'cad':chr(5)+NULL_CHAR+chr(76)+NULL_CHAR*5, #CTRL+ALT+DEL
-'down':NULL_CHAR*2 +chr(81)+NULL_CHAR*5, #DOWN
-
-#Next Signs are used for different keymappings - change if you want to
-'$':NULL_CHAR*2 +chr(40)+NULL_CHAR*5, #ENTER
-'%':NULL_CHAR*2 +chr(41)+NULL_CHAR*5, #ESC
-'^':NULL_CHAR*2 +chr(42)+NULL_CHAR*5, #BACKSPACE
-'~':NULL_CHAR*2 +chr(43)+NULL_CHAR*5, #TAB
-'_':NULL_CHAR*2 +chr(44)+NULL_CHAR*5, #SPATIE
-'+':NULL_CHAR*2 +chr(70)+NULL_CHAR*5, #PRINT SCREEN
-'[':NULL_CHAR*2 +chr(76)+NULL_CHAR*5, #DELETE
-']':chr(5)+NULL_CHAR+chr(76)+NULL_CHAR*5, #CTRL+ALT+DEL
-'|':NULL_CHAR*2 +chr(81)+NULL_CHAR*5, #DOWN
+'down':NULL_CHAR*2+chr(81)+NULL_CHAR*5, #DOWN
+'run':chr(8)+NULL_CHAR+chr(21)+NULL_CHAR*5, #windows+r
+'w+x':chr(8)+NULL_CHAR+chr(27)+NULL_CHAR*5, #WINDOWS+X
 }
